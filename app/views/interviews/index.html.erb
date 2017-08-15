@@ -1,0 +1,42 @@
+<h3 class="center"> Interview Archive </h3>
+
+<div class="row center search-box">
+  <form class="col s12">
+    <div class="row search-bar">
+      <div class="input-field">
+        <i class="material-icons prefix">search</i>
+        <input id="icon_prefix" type="text" class="validate">
+        <label for="icon_prefix">Search</label>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="row">
+  <table class="highlight centered responsive-table" id="interview-table">
+    <thead>
+      <tr>
+          <th>Interviewee</th>
+          <th>Date</th>
+          <th>Duration</th>
+          <th>Language(s)</th>
+          <th>Gender</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @interviews.each do |interview| %>
+      <tr>
+        <td><%=link_to interview.name, interviews_show_path(interview)%></td>
+        <td><%=interview.date %></td>
+        <td><%=interview.duration %></td>
+        <td><%=interview.language %></td>
+        <td><%=interview.gender %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+      
+

@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col s12 m4">
+    <h3><%=@interview.name%></h3>
+    <h5>Gender: <%=@interview.gender%></h5>  
+    <h5>Duration: <%=@interview.duration%></h5>  
+    <h5>Language: <%=@interview.language%></h5>  
+    <h5>Interview Conducted On: <%=@interview.date%></h5> 
+    <br>
+    <h5> Audio: </h5>
+    <audio controls class="interview-audio">
+       <source src=<%=@interview.audio_url%> type = "audio/mpeg">
+    </audio>
+  </div>
+  
+  <div class="col s12 m8">
+  <br>
+    <embed src="https://cdn.rawgit.com/alif-bae/regional-archive-assets/5eca46cc/pdf/AbdulHameedInterview.docx.pdf" width="100%" height="1000" type='application/pdf'>
+  </div>
+</div>

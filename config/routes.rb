@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'interviews/index'
+
+  get 'interviews/:id', to: "interviews#show", as: "interviews_show"
+
   root to: 'home#index'
 
   get 'home/index'
