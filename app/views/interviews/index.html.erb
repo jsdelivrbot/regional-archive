@@ -17,11 +17,11 @@
   <table class="highlight centered responsive-table" id="interview-table">
     <thead>
       <tr>
-          <th>Interviewee</th>
+          <th>Name</th>
           <th>Date</th>
           <th>Duration</th>
           <th>Language(s)</th>
-          <th>Gender</th>
+          <th>Themes</th>
       </tr>
     </thead>
 
@@ -29,10 +29,10 @@
     <% @interviews.each do |interview| %>
       <tr>
         <td><%=link_to interview.name, interviews_show_path(interview)%></td>
-        <td><%=interview.date %></td>
+        <td><%=interview.interview_date %></td>
         <td><%=interview.duration %></td>
-        <td><%=interview.language %></td>
-        <td><%=interview.gender %></td>
+        <td><%=interview.languages.join(", ") %></td>
+        <td><%=interview.themes.join(", ") %></td>
       </tr>
     <% end %>
     </tbody>
