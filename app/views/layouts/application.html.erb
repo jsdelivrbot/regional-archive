@@ -15,7 +15,7 @@
   <body>
     <header>
       <%= render 'layouts/nav' %>
-      <%= render 'layouts/header' %>
+      <%= render 'layouts/header' unless @disable_header%>
     </header>
 
     <main>
