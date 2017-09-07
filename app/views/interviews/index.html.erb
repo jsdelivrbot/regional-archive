@@ -12,10 +12,14 @@
   </form>
 </div>
 
+<div class="center">
+  <%= will_paginate @interviews %>
+</div>
+<br>
 <% @interviews.each do |interview| %>
   <div class="row">
-    <div class="col s12 m12">
-      <div class="card green lighten-5">
+    <div class="col s12 m12 hvr-grow">
+      <div class="card grey lighten-4 interview-record ">
         <div class="card-content black-text">
           <span class="card-title">
             <b><%= link_to interview.name, interviews_show_path(interview) %></b>
@@ -23,11 +27,11 @@
           
           <p align="justify"><b>Duration: </b> <%= interview.duration %> </p>
           
-          <% if interview.languages != "" %>
+          <% if interview.languages != [] %>
             <p align="justify"><b>Languages:</b> <%= interview.languages.join(", ") %> </p>
           <% end %>
 
-          <% if interview.themes != "" %>
+          <% if interview.themes != [] %>
             <p align="justify"><b>Themes:</b> <%= interview.themes.join(", ") %> </p>
           <% end %>
         </div>  
@@ -36,32 +40,7 @@
   </div>  
 <% end %>
 
-
-
-<!-- <div class="row">
-  <table class="highlight centered responsive-table" id="interview-table">
-    <thead>
-      <tr>
-          <th>Name</th>
-          <th>Date</th>
-          <th>Duration</th>
-          <th>Language(s)</th>
-          <th>Themes</th>
-      </tr>
-    </thead>
-
-    <tbody>
-    <% @interviews.each do |interview| %>
-      <tr>
-        <td><%=link_to interview.name, interviews_show_path(interview)%></td>
-        <td><%=interview.interview_date %></td>
-        <td><%=interview.duration %></td>
-        <td><%=interview.languages.join(", ") %></td>
-        <td><%=interview.themes.join(", ") %></td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
+<br><br><br>
+<div class="center">
+  <%= will_paginate @interviews %>
 </div>
-      
- -->

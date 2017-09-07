@@ -1,7 +1,7 @@
 class InterviewsController < ApplicationController
   def index
     @disable_header = true
-    @interviews = Interview.all
+    @interviews = Interview.all.paginate(page: params[:page], per_page: 15)
   end
 
   def show

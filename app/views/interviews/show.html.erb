@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col s12 m4">
-    <h2><%=@interview.name%></h2>
+    <h2 class="interview-person-name"><%=@interview.name%></h2>
+    <div class="divider"></div>
     
     <% if @interview.interview_date != ""%>
        <b>Date of Interview:</b> <%=@interview.interview_date%></p>  
@@ -26,11 +27,11 @@
        <b>Religion:</b> <%=@interview.religion%></p>  
     <% end %>
 
-    <% if @interview.languages != ""%>
+    <% if @interview.languages != []%>
        <b>Languages:</b> <%=@interview.languages.join(", ")%></p>  
     <% end %>
 
-    <% if @interview.themes != ""%>
+    <% if @interview.themes != []%>
        <b>Themes:</b> <%=@interview.themes.join(", ")%></p> 
     <% end %>
 
@@ -44,7 +45,7 @@
   </div>
   
   <div class="col s12 m8">
-    <audio controls class="interview-audio">
+    <audio controls class="interview-audio hvr-glow">
        <source src=<%=@interview.audio_url%> type = "audio/mpeg">
     </audio>
   <br>

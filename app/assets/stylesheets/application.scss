@@ -60,14 +60,17 @@ p {
   padding-right: 200px;
 }
 
-#interview-table {
-  td {
-    font-size: 20px;
-  }
+.interview-record {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
-  th {
-    font-size: 22px;
-  }
+.interview-person-name {
+  margin-bottom: 10px;
+}
+
+.divider {
+  margin-bottom: 20px;
 }
 
 .interview-audio {
@@ -76,27 +79,23 @@ p {
   width: 100%;
 }
 
-// 
-audio:hover, audio:focus, audio:active
-{
--webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--webkit-transform: scale(1.05);
--moz-transform: scale(1.05);
-transform: scale(1.05);
+
+.pagination {
+    font-size: 25px;
 }
 
-audio
-{
--webkit-transition:all 0.5s linear;
--moz-transition:all 0.5s linear;
--o-transition:all 0.5s linear;
-transition:all 0.5s linear;
--moz-box-shadow: 2px 2px 4px 0px #004D40;
--webkit-box-shadow:  2px 2px 4px 0px #004D40;
-box-shadow: 2px 2px 4px 0px #004D40;
--moz-border-radius:7px 7px 7px 7px ;
--webkit-border-radius:7px 7px 7px 7px ;
-border-radius:7px 7px 7px 7px ;
+.pagination > * {
+    margin-right: 0.1em;
+    padding: 0.3em 0.4em;
+}
+
+
+.pagination .current {
+    background: none repeat scroll 0 0;
+    color: white;
+    text-shadow: 1px 1px 1px #171717;
+}
+
+.pagination .disabled {
+    color: #C0C0C0;
 }
